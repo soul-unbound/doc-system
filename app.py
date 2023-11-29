@@ -6,14 +6,14 @@ import psycopg2
 app = Flask(_name_)
 
 # AWS S3 Configuration
-S3_BUCKET = 'your-s3-bucket-name'
+S3_BUCKET = 'documentstorages3bucket'
 
 # RDS Configuration
-RDS_HOST = 'your-rds-host'
-RDS_PORT = 'your-rds-port'
-RDS_DB = 'your-rds-database'
-RDS_USER = 'your-rds-username'
-RDS_PASSWORD = 'your-rds-password'
+RDS_HOST = 'http://document-db.cmfujfihcbg0.us-east-1.rds.amazonaws.com'
+RDS_PORT = '3306'
+RDS_DB = 'document-db'
+RDS_USER = 'admin'
+RDS_PASSWORD = 'masterpassword'
 
 # AWS S3 and RDS clients
 s3 = boto3.client('s3')
